@@ -1,0 +1,283 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+   --turquoise:  #4d96a9;
+   --light-blue: #8fdce2;
+   --purple: #855fb1;
+   --white: #ffffff;
+   --black:#28283d;
+   --grey: #8f90a3;
+} 
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--white);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* header logo */
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+}
+
+
+/* hero container */
+.hero-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-panel{
+    position: relative;
+}
+.image-panel-left{
+    right: 1rem;
+    padding-right: 2rem;
+}
+.image-panel-right{
+    left: 1rem;
+    padding-left: 2rem;
+}
+
+.tab-mobile-img{
+    display: none;
+}
+
+/* hero text */
+
+.hero-text{
+
+ text-align: center;
+}
+
+.hero-heading{
+    font-size: 3.6rem;
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.hero-para{
+    font-size: 1.1rem;
+    color: var(--grey);
+    margin-bottom: 1rem;
+}
+
+button{
+    border: none;
+    padding: 1.2rem 1.7rem;
+    border-radius: 2rem;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--white);
+    margin: 0.5rem 0.7rem;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+}
+
+button:hover{
+    transform: translateY(-2px);
+}
+
+.download-btn{
+    background-color: var(--turquoise);
+}
+
+.download-btn span{
+    color:var(--light-blue)
+}
+
+.what-btn{
+    background-color: var(--purple);
+}
+
+/* number seperator */
+
+
+.number::before{
+    content: " ";
+    border-right: 1px solid var(--grey);
+    margin: 0 auto;
+    height: 7rem;
+    position: absolute;
+    top: -7rem;
+}
+
+.number{
+    width: 3rem;
+    height: 3rem;
+    margin: auto;
+    margin-top: 13rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-weight: bold;
+    border: 1px solid var(--grey);
+    border-radius: 50%;
+    color: var(--grey);
+}
+
+/* gallery */
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    margin: 5rem;
+}
+
+.gallery-image{
+    width: 100%;
+   border-radius: 0.5rem;
+   cursor: pointer;
+   transition: all 0.2s ease-in;
+}
+
+.gallery-image:hover{
+    transform: translateY(-15px);
+}
+
+/* description section */
+
+.description{
+    text-align: center;
+    width: 35%;
+    margin: auto;
+}
+
+.small-text{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--turquoise);
+    letter-spacing: 0.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.description-heading{
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.description-para{
+    font-size: 1.1rem;
+    color: var(--grey);
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+/* footer */
+
+.footer{
+    position: relative;
+    background-image: url(/Images/desktop/image-footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6.8rem 3rem;
+    color: var(--white);
+    margin-top: 2rem;
+}
+
+.layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--turquoise);
+    opacity: 0.4;
+}
+
+.footer-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+   position: relative;
+   z-index: 1;
+}
+
+.footer-h1{
+    font-size: 2.5rem;
+}
+
+.footer-para{
+    font-size: 1.1rem;
+    line-height: 1.4;
+  
+}
+.footer-btn{
+    background-color: var(--purple);
+}
+
+@media screen and (max-width:957px) {
+
+    .tab-mobile-img{
+        width: 100%;
+        display: block;
+        margin-bottom: 4rem;
+       
+    }
+    .hero-container{
+        flex-wrap: wrap;
+    }
+    .hero-text{
+        width: 85%;
+    }
+    .image-panel{
+        display: none;
+    }
+    .description{
+        width: 85%;
+    }
+    .gallery{
+        margin: 3rem 2rem;
+    }
+    .number{
+        margin-top: 8rem;
+    }
+    .footer{
+        background-size: cover;
+    }
+
+    
+}
+
+@media screen and (max-width:800px) {
+
+   
+    .gallery{
+      margin: 2rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+   
+    .footer-text{
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer{
+        background-image: url(/Images/tablet/image-footer.jpg);
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+.hero-heading{
+    font-size: 2.5rem;
+}
+}
