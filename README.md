@@ -1,6 +1,6 @@
 # Meet landing page
 
-Front end mentor challenge : [Link](https://www.frontendmentor.io/solutions/meet-landing-page-T5fLtcFs1)
+Front end mentor challenge : [Link](https://meet-landing-six.vercel.app/)
 
 
 ## Screenshots
@@ -10,6 +10,6 @@ Front end mentor challenge : [Link](https://www.frontendmentor.io/solutions/meet
   
 ## Demo
 
-https://loganwillaumez-frontendmentor.github.io/004-meet-landing-page/
+https://meet-landing-six.vercel.app/
 
   
